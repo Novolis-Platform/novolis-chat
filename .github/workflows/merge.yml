@@ -1,0 +1,25 @@
+name: Merge
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'build/version.json'
+      - 'build/version.props'
+      - 'docs/**'
+      - '**.md'
+      - 'LICENSE'
+      - '.editorconfig'
+  workflow_dispatch:
+    inputs:
+      skip_publish:
+        type: boolean
+        default: false
+jobs:
+  ci:
+    uses: Novolis-Platform/novolis-workflows/.github/workflows/dotnet-merge-publish.yml@main
+    secrets: inherit
+    with:
+      skip_publish: ${{ inputs.skip_publish == true }}
+    permissions:
+      contents: read
+      packages: write
