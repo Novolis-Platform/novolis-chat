@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Chat.Directory</PackageId>
+    <RootNamespace>Novolis.Chat.Directory</RootNamespace>
+    <Description>Named chat spaces and channels, rosters, devices, and SecureText group membership.</Description>
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Novolis.Chat.Abstractions\Novolis.Chat.Abstractions.csproj" />
+    <PackageReference Include="Novolis.Game.Identity.Abstractions" />
+    <PackageReference Include="Novolis.Security.SecureText" />
+  </ItemGroup>
+</Project>

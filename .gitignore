@@ -1,0 +1,13 @@
+bin/
+obj/
+artifacts/
+.vs/
+*.user
+*.suo
+.DS_Store
+TestResults/
+[Tt]est[Rr]esults/
+.idea/
+**/.idea/
+DotSettings.*
+*.DotSettings.user

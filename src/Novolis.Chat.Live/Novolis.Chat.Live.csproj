@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Chat.Live</PackageId>
+    <RootNamespace>Novolis.Chat.Live</RootNamespace>
+    <Description>Ephemeral chat presence, typing TTL, and receipt state.</Description>
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Novolis.Chat.Abstractions\Novolis.Chat.Abstractions.csproj" />
+  </ItemGroup>
+</Project>

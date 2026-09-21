@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Chat.Abstractions</PackageId>
+    <RootNamespace>Novolis.Chat</RootNamespace>
+    <Description>Chat ids, frames, events, and live-state contracts.</Description>
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+</Project>

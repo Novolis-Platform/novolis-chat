@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Novolis.Chat.Abstractions/Novolis.Chat.Abstractions.csproj" />
+    <Project Path="src/Novolis.Chat.Directory/Novolis.Chat.Directory.csproj" />
+    <Project Path="src/Novolis.Chat.Live/Novolis.Chat.Live.csproj" />
+    <Project Path="src/Novolis.Chat.Hosting.AspNetCore/Novolis.Chat.Hosting.AspNetCore.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Novolis.Chat.Unit/Novolis.Chat.Unit.csproj" />
+  </Folder>
+</Solution>

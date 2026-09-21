@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Novolis.Chat.Hosting.AspNetCore</PackageId>
+    <RootNamespace>Novolis.Chat.Hosting.AspNetCore</RootNamespace>
+    <Description>ASP.NET Core SignalR orchestration for encrypted chat conversations.</Description>
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <ProjectReference Include="..\Novolis.Chat.Abstractions\Novolis.Chat.Abstractions.csproj" />
+    <ProjectReference Include="..\Novolis.Chat.Directory\Novolis.Chat.Directory.csproj" />
+    <ProjectReference Include="..\Novolis.Chat.Live\Novolis.Chat.Live.csproj" />
+    <PackageReference Include="Novolis.Game.Identity.Abstractions" />
+    <PackageReference Include="Novolis.Game.Identity.AspNetCore" />
+    <PackageReference Include="Novolis.Messaging.SecureText" />
+    <PackageReference Include="Novolis.Security.SecureText" />
+  </ItemGroup>
+</Project>

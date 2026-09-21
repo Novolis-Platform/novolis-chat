@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Novolis.Chat.Unit</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="TUnit" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/Novolis.Chat.Abstractions/Novolis.Chat.Abstractions.csproj" />
+    <ProjectReference Include="../../src/Novolis.Chat.Directory/Novolis.Chat.Directory.csproj" />
+    <ProjectReference Include="../../src/Novolis.Chat.Live/Novolis.Chat.Live.csproj" />
+  </ItemGroup>
+</Project>

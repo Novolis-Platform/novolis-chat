@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup Label="Novolis platform version">
+    <NovolisYear>2026</NovolisYear>
+    <NovolisMajor>1</NovolisMajor>
+    <NovolisMinor>1</NovolisMinor>
+    <NovolisPlatformVersion>2026.1.1</NovolisPlatformVersion>
+    <NovolisPackageFloatVersion>2026.1.*</NovolisPackageFloatVersion>
+    <NovolisLocalBuild Condition="'$(NovolisLocalBuild)' == ''">1</NovolisLocalBuild>
+  </PropertyGroup>
+</Project>
