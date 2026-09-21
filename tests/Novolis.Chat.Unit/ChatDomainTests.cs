@@ -1,6 +1,7 @@
 using Novolis.Chat.Abstractions;
 using Novolis.Chat.Directory;
 using Novolis.Chat.Live;
+using Novolis.Game.Identity.Abstractions;
 
 namespace Novolis.Chat.Unit;
 
@@ -18,6 +19,29 @@ public sealed class ChatDomainTests
             .IsTrue();
         await Assert.That(channel).IsNotNull();
         await Assert.That(directory.IsKnownChannel("#crew")).IsTrue();
+    }
+
+    [Test]
+    public async Task Media_policy_limits_one_conversation_without_blocking_another()
+    {
+        var directory = new ChatDirectory(new MediaSessionPolicy(MaxPeers: 2));
+        directory.Join("#lobby", PlayerRef.New(), "alice", "connection-alice");
+        directory.Join("#lobby", PlayerRef.New(), "bob", "connection-bob");
+        directory.Join("#lobby", PlayerRef.New(), "carol", "connection-carol");
+
+        await Assert.That(directory.VideoParticipantLimit).IsEqualTo(2);
+        await Assert.That(
+                directory.TryJoinVideo("#lobby", "connection-alice", "call-a"))
+            .IsTrue();
+        await Assert.That(
+                directory.TryJoinVideo("#lobby", "connection-bob", "call-a"))
+            .IsTrue();
+        await Assert.That(
+                directory.TryJoinVideo("#lobby", "connection-carol", "call-a"))
+            .IsFalse();
+        await Assert.That(
+                directory.TryJoinVideo("#lobby", "connection-carol", "call-b"))
+            .IsTrue();
     }
 
     [Test]

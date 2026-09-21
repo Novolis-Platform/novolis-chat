@@ -501,7 +501,7 @@ public sealed class ChatHub : Hub
                 if (!_directory.TryJoinVideo(channel, Context.ConnectionId, conversationKey))
                 {
                     throw new HubException(
-                        $"Video mesh full (max {ChatDirectory.MaxVideoParticipants}).");
+                        $"Video mesh full (max {_directory.VideoParticipantLimit}).");
                 }
                 break;
             case "video-part":

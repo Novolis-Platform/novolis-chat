@@ -17,13 +17,23 @@ public sealed class ChatDirectory
 
     readonly ConcurrentDictionary<string, SpaceState> _spaces = new(StringComparer.OrdinalIgnoreCase);
     readonly ConcurrentDictionary<string, ChannelState> _channels = new(StringComparer.OrdinalIgnoreCase);
+    readonly MediaSessionPolicy _mediaSessionPolicy;
 
-    public ChatDirectory()
+    public ChatDirectory(MediaSessionPolicy? mediaSessionPolicy = null)
     {
+        _mediaSessionPolicy = (mediaSessionPolicy ?? new MediaSessionPolicy()).Normalize();
         var defaultSpace = new SpaceState(SpaceId.Default, "Default");
         _spaces[SpaceKey(SpaceId.Default)] = defaultSpace;
         RegisterChannel(defaultSpace, Lobby);
     }
+
+    /// <summary>Admission policy applied to each conversation-scoped media session.</summary>
+    public MediaSessionPolicy MediaSessionPolicy => _mediaSessionPolicy;
+
+    /// <summary>
+    /// Effective participant limit after applying the policy and the native mesh ceiling.
+    /// </summary>
+    public int VideoParticipantLimit => Math.Min(_mediaSessionPolicy.MaxPeers, MaxVideoParticipants);
 
     public IReadOnlyList<ChatSpaceInfo> GetSpaces() =>
         _spaces.Values
@@ -179,7 +189,7 @@ public sealed class ChatDirectory
             var members = GetVideoMembers(state, conversationKey);
             if (members.Contains(connectionId))
                 return true;
-            if (members.Count >= MaxVideoParticipants)
+            if (members.Count >= VideoParticipantLimit)
                 return false;
 
             members.Add(connectionId);
