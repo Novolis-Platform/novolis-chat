@@ -11,9 +11,9 @@
     <ProjectReference Include="..\Novolis.Chat.Abstractions\Novolis.Chat.Abstractions.csproj" />
     <ProjectReference Include="..\Novolis.Chat.Directory\Novolis.Chat.Directory.csproj" />
     <ProjectReference Include="..\Novolis.Chat.Live\Novolis.Chat.Live.csproj" />
-    <PackageReference Include="Novolis.Game.Identity.Abstractions" />
-    <PackageReference Include="Novolis.Game.Identity.AspNetCore" />
-    <PackageReference Include="Novolis.Messaging.SecureText" />
-    <PackageReference Include="Novolis.Security.SecureText" />
+    <LibraryReference Include="Novolis.Game.Identity.Abstractions" />
+    <LibraryReference Include="Novolis.Game.Identity.AspNetCore" />
+    <LibraryReference Include="Novolis.Messaging.SecureText" />
+    <LibraryReference Include="Novolis.Security.SecureText" />
   </ItemGroup>
 </Project>
