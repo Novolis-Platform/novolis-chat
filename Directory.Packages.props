@@ -5,10 +5,10 @@
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="Microsoft.AspNetCore.SignalR.Client" Version="10.0.8" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.8" />
-    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.8" />
-    <PackageVersion Include="Microsoft.Extensions.Options" Version="10.0.8" />
+    <PackageVersion Include="Microsoft.AspNetCore.SignalR.Client" Version="10.0.12" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.12" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.12" />
+    <PackageVersion Include="Microsoft.Extensions.Options" Version="10.0.12" />
     <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="10.0.401" />
     <PackageVersion Include="Novolis.Game.Identity.Abstractions" Version="2026.1.*" />
     <PackageVersion Include="Novolis.Game.Identity.AspNetCore" Version="2026.1.*" />
@@ -16,6 +16,6 @@
     <PackageVersion Include="Novolis.Security.SecureText" Version="2026.1.*" />
     <PackageVersion Include="Novolis.Testing.TestBases" Version="2026.1.*" />
     <PackageVersion Include="Novolis.Testing.TUnit" Version="2026.1.*" />
-    <PackageVersion Include="TUnit" Version="1.68.17" />
+    <PackageVersion Include="TUnit" Version="1.72.4" />
   </ItemGroup>
 </Project>
