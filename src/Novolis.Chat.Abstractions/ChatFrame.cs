@@ -56,39 +56,3 @@ public sealed record ChatFrame(
             bodyFormat);
     }
 }
-
-public sealed record ChatFrameAnnotations(
-    ThreadId? Thread = null,
-    MessageRef? Parent = null,
-    string? Reaction = null);
-
-public enum ChatPresenceStatus
-{
-    Offline = 0,
-    Online = 1,
-    Away = 2,
-}
-
-public sealed record ChatPresence(
-    string Conversation,
-    string Nick,
-    ChatPresenceStatus Status,
-    DateTimeOffset AtUtc);
-
-public sealed record ChatTyping(
-    string Conversation,
-    string Nick,
-    DateTimeOffset ExpiresAtUtc);
-
-public sealed record ChatReceipt(
-    string Conversation,
-    MessageRef Message,
-    string Nick,
-    DateTimeOffset AtUtc);
-
-public sealed record ChatReaction(
-    string Conversation,
-    MessageRef Message,
-    string Nick,
-    string Token,
-    DateTimeOffset AtUtc);

@@ -563,16 +563,3 @@ public sealed class ChatDirectory
         public HashSet<Guid> ApprovedDeviceIds { get; } = [];
     }
 }
-
-public sealed record ChatSpaceInfo(SpaceId Id, string Name);
-
-public sealed record ChatChannelInfo(ChannelId Id, string Name);
-
-public sealed record SecureTextGroupMemberDto(string Nick, Guid DeviceId);
-
-public sealed record SecureTextGroupDto(
-    Guid GroupId,
-    string Name,
-    string InitiatorNick,
-    IReadOnlyList<SecureTextGroupMemberDto> Members,
-    IReadOnlyList<Guid> ApprovedDeviceIds);

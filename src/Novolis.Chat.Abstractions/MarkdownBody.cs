@@ -16,8 +16,3 @@ public readonly record struct MarkdownBody(string Source)
 
     public override string ToString() => Source;
 }
-
-public enum ChatBodyFormat
-{
-    Markdown = 0,
-}
