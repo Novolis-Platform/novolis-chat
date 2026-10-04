@@ -16,6 +16,6 @@
     <PackageVersion Include="Novolis.Security.SecureText" Version="2026.1.*" />
     <PackageVersion Include="Novolis.Testing.TestBases" Version="2026.1.*" />
     <PackageVersion Include="Novolis.Testing.TUnit" Version="2026.1.*" />
-    <PackageVersion Include="TUnit" Version="1.72.4" />
+    <PackageVersion Include="TUnit" Version="1.72.16" />
   </ItemGroup>
 </Project>
